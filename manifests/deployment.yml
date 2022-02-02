@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jakonddevopsprojectsamples 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jakonddevopsprojectsamples
+  template:
+    metadata:
+      labels:
+        app: jakonddevopsprojectsamples 
+    spec:
+      containers:
+        - name: jakonddevopsprojectsamples 
+          image: devopsacrram.azurecr.io/jakonddevopsprojectsamples
+          ports:
+          - containerPort: 80
